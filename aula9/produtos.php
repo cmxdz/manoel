@@ -25,6 +25,6 @@
                 ];
 
 
-            echo json_encode($produtos);
+            echo json_encode($produtos) . "<br>"; 
 
 ?>
