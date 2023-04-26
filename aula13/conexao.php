@@ -3,7 +3,7 @@
     $host = "127.0.0.1";
     $user = "root";
     $password = "";
-    $database = "db_cataologo_3infob";
+    $database = "db_catalogo_3infob";
     $port = 3306;
 
 
