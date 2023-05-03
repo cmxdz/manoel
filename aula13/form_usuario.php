@@ -6,26 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>  
-
-    <h1> Cadastro de usuário </h1>
+<body>
+    <h1>Cadastro de usuário</h1>
     <hr>
 
+    <form action="usuario/inserir.php" method="post">
+        
+        <label>Nome</label><br>
+        <input type="text" name="nome"><br>
 
-        <form action="usuario/inserir.php" method="post"> 
+        <label>Login</label><br>
+        <input type="text" name="login"><br>
 
-            <label> Nome  </label><br>
-            <input type="text" name="nome"><br>
+        <label>Senha</label><br>
+        <input type="password" name="senha"><br>
 
-            <label> Login  </label><br>
-            <input type="text" name="login"><br>
-
-            <label> Senha </label><br>
-            <input type="password" name="senha"><br>
-
-            <button type="submit"> Cadastrar </button>
-        </form>
+        <button type="submit">Inserir</button>
+        
+    </form>
 
 
+    
 </body>
 </html>
