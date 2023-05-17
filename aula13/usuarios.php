@@ -15,12 +15,13 @@
     <h1>Usuários </h1>
     <hr>
     <a href="form_usuario.php" class="btn btn-success"> Inserir Novo </a>
-    <table class="table">
 
+    <table class="table">
         <thead>
             <tr>
                 <th scope="col"> Nome </th>
                 <th scope="col"> Login </th>
+                <th scope="col"> Foto </th>
                 <th scope="col"> Ações </th>
             </tr>
         </thead>
@@ -30,6 +31,7 @@
             <tr>
                 <td> <?php echo $usuario-> nome ?>  </td>
                 <td> <?php echo $usuario-> login ?> </td>
+                <td> <img src="uploads/<?php echo $usuario-> foto ?>" height="25px"  > </td>
                 <td>
                   <a href="usuario/excluir.php?id=<?= $usuario->idusuario ?>" class="btn btn-danger"> <i class="fa-sharp fa-solid fa-trash"></i> Excluir </a>
 
