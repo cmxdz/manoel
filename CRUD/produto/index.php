@@ -20,6 +20,7 @@
           <th scope="col"> Peso </th>
           <th scope="col"> Quantidade </th>
           <th scope="col"> Valor </th>
+          <th scope="col"> Foto </th>
           <th scope="col"> Ações </th>
     </tr>
          </thead>
@@ -28,6 +29,7 @@
     <tr>
         <td><?= $produto->desc ?></td>
         <td><?= $produto->peso ?></td>
+        <td><img src="../upload/<?= $produto->foto ?>" height="25px"></td>
         <td class="text-end" width="25%">
         <a href="formulario.php?id=<?= $produto->cod ?>" class="btn btn-primary">
             <i class="fa-regular fa-pen-to-square"></i>
