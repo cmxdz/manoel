@@ -25,18 +25,19 @@
     //pega a primeira linha de resultado da consulta
     $usuario = $resultados->fetch_object();
 
-        if($usuario != NULL
-            and password_verify($senha, $usuario->senha)){
+        if($usuario != NULL){
 
+            if (password_verify($senha, $usuario->senha)){
                 //inicia
                 session_start();
                 $_SESSION['usuario'] = $usuario->nome;
-                header("Location; ../noticia/index.php");
-                die();
+                header("Location: ../noticia/index.php");
+            }else{
+                $erro_login = "Senha inválida!";
             }
-
-    }else{
-        header("Location: formulario.php");
+        }else{
+            $erro_login = "Não existe usuário com o login informado!";
+        }
     }
 
 ?>

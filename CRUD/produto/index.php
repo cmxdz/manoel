@@ -1,12 +1,10 @@
 <?php
-    require_once "../login/controlar_acesso.php";
     require_once "consultar_todos.php";
     require_once "../template/cabecalho.php";
-    require_once "../template/menu_restrito.php";
 ?>
 
     <div class="container">
-    <h1>Notícias</h1>
+    <h1> Produtos </h1>
     <hr>
 
     <div class="text-end">
@@ -18,24 +16,24 @@
     <table class="table" id="tabela_dados">
       <thead>
         <tr>
-          <th scope="col">Título</th>
-          <th scope="col">Categoria</th>
-          <th scope="col">Foto</th>
-          <th scope="col">Ações</th>
+          <th scope="col"> Descrição </th>
+          <th scope="col"> Peso </th>
+          <th scope="col"> Quantidade </th>
+          <th scope="col"> Valor </th>
+          <th scope="col"> Ações </th>
     </tr>
          </thead>
   <tbody>
-    <?php foreach($noticias as $noticia): ?> 
+    <?php foreach($produtos as $produto): ?> 
     <tr>
-        <td><?= $noticia->titulo ?></td>
-        <td><?= $noticia->categoria ?></td>
-        <td><img src="../upload/<?= $noticia->foto ?>" height="25px"></td>
+        <td><?= $produto->desc ?></td>
+        <td><?= $produto->peso ?></td>
         <td class="text-end" width="25%">
-        <a href="formulario.php?id=<?= $noticia->idnoticia ?>" class="btn btn-primary">
+        <a href="formulario.php?id=<?= $produto->cod ?>" class="btn btn-primary">
             <i class="fa-regular fa-pen-to-square"></i>
             Atualizar
           </a>
-          <a href ="excluir.php?id=<?=$noticia->idnoticia ?>" class="btn btn-danger">
+          <a href ="excluir.php?id=<?=$produto->cod ?>" class="btn btn-danger">
           <i class="fa-regular fa-trash-can"></i>
             Excluir</a>
         </td>
