@@ -4,7 +4,7 @@
    require_once "../banco/conexao.php"; 
 
    //cria uma variável com um comando SQL
-   $SQL = "SELECT * FROM usuario";
+   $SQL = "SELECT distinct valor FROM produto";
  
    //prepara o comando para ser executado no mysql
    $comando = $conexao->prepare($SQL);
@@ -16,8 +16,8 @@
 $resultados = $comando->get_result();
 
 //pega todas as linha de resultado da consulta
-$usuarios = [];
-while ($usuario = $resultados->fetch_object()){
-   $usuarios[] = $usuario;
+$valores = [];
+while ($c = $resultados->fetch_object()){
+   $valores[] = $c;
 }
 

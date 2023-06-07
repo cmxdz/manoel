@@ -1,6 +1,7 @@
 <?php
     require_once "consultar_todos.php";
     require_once "../template/cabecalho.php";
+    require_once "../template/menu_restrito.php";
 ?>
 
     <div class="container">
@@ -29,7 +30,9 @@
     <tr>
         <td><?= $produto->desc ?></td>
         <td><?= $produto->peso ?></td>
-        <td><img src="../upload/<?= $produto->foto ?>" height="25px"></td>
+        <td><?= $produto->quantidade ?></td>
+        <td><?= $produto->valor ?></td>
+        <td><img src="../upload/<?= $produto->foto ?>" height="75px"></td>
         <td class="text-end" width="25%">
         <a href="formulario.php?id=<?= $produto->cod ?>" class="btn btn-primary">
             <i class="fa-regular fa-pen-to-square"></i>

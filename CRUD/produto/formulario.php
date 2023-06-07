@@ -18,9 +18,7 @@
         <input type="text" class="form-control" name="desc" value="<?php echo $produto->desc ?? ""; ?>"><br>
 
         <label class="form-label"> Peso </label> <br>
-        <textarea class="form-control" name="peso">
-            <?php echo $produto->peso ?? ""; ?>
-        </textarea><br>
+        <input class="form-control" name="peso" value="<?php echo $produto->peso ?? ""; ?>"><br>
 
         <label class="form-label"> Quantidade </label><br>
         <input type="text" class="form-control" name="quantidade" value="<?php echo $produto->quantidade ?? ""; ?>"><br>

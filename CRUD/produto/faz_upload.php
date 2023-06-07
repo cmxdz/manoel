@@ -8,7 +8,7 @@ $origem = $_FILES['foto']['tmp_name'];
 $nome_foto = "../upload/".time().$_FILES['foto']['name'];
 
 //local para onde a foto de upload
-$destino = "../uploads/$nome_foto";
+$destino = "../upload/$nome_foto";
 
 //move o arquivo de upload para a pasta destino
 move_uploaded_file($origem, $destino);
