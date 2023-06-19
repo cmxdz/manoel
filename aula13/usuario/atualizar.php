@@ -1,7 +1,7 @@
 <?php
    
    //importa o arquivo de conexão
-   require_once "../conexao.php";
+   require_once "../banco/conexao.php";
 
    $id = $_POST['idusuario'];
    $nome = $_POST['nome'];

@@ -11,7 +11,7 @@
    
 
    //cria uma variável com um comando SQL
-   $SQL = "UPDATE `produto` SET  `desc`= ?, `peso`= ?, `quantidade`= ?, `valor`= ? WHERE  `idusuario`= ? ;";
+   $SQL = "UPDATE `produto` SET  `desc`= ?, `peso`= ?, `quantidade`= ?, `valor`= ? WHERE  `cod`= ? ;";
  
    //prepara o comando para ser executado no mysql
    $comando = $conexao->prepare($SQL);
